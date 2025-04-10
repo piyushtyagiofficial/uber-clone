@@ -18,6 +18,7 @@ const RidePopup = (props) => {
         </div>
         <h5 className='text-lg font-semibold'>2.2 KM</h5>
       </div>
+      {/* Ride Details */}
       <div className="flex gap-2 flex-col items-center justify-center">
         <div className='mt-5 w-full'>
             <div className='flex items-center gap-5 p-3 border-b-2 border-gray-300'>
@@ -43,13 +44,15 @@ const RidePopup = (props) => {
             </div>
 
         </div>
+        <div className='flex w-full mt-5 items-center justify-between'>
+        <button onClick={() => {
+            props.setRidePopupPanel(false)
+        }} className='bg-gray-300 text-black-700 font-semibold p-3 px-10 rounded-lg'>Ignore</button>
         <button onClick={() => {
             props.setConfirmRidePopupPanel(true)
             props.setRidePopupPanel(false)
-            }} className='bg-green-600 mt-5 w-full text-white font-semibold p-2 rounded-lg'>Accept</button>
-        <button onClick={() => {
-            props.setRidePopupPanel(false)
-        }} className='bg-gray-300 text-black-700 mt-1 w-full font-semibold p-2 rounded-lg'>Ignore</button>
+            }} className='bg-green-600 text-white font-semibold p-3 px-10  rounded-lg'>Accept</button>
+        </div>
 
       </div>
     </div>
